@@ -1,0 +1,190 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #c0e7c3;
+}
+
+/* Dashboard title */
+.home{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.logo_Pic{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* Navigation bar styles */
+.navbar {
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin-left: 16px;
+}
+
+.nav-link {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-link:hover, .nav-link:focus {
+    text-decoration: underline;
+}
+
+/* Main content container */
+.container {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-item {
+        margin: 5px 0;
+    }
+}
+
+
+/* CSS for Popup Message */
+#flash-message {
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1001;
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
+}
+
+#flash-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+
+
+.container {
+    max-width: 1200px; /* Limiting maximum width to ensure content doesn't stretch too wide on large screens */
+}
+
+/* Card styles for clear segmenting of information */
+.card {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadows for depth */
+    margin-bottom: 20px; /* Space between cards */
+}
+
+.card-body {
+    padding: 20px; /* Ample padding for content within cards */
+}
+
+/* Input group enhancements for better alignment and visibility */
+.input-group-text {
+    background-color: #eee; /* Light background for the input group prefix */
+    border: 1px solid #ccc; /* Border to match the input field */
+}
+
+.form-control {
+    max-width: 300px; /* Restricting width to keep form inputs manageable */
+}
+
+/* Styling for buttons to increase touch area on smaller screens */
+button.btn {
+    padding: 10px 15px; /* Larger padding for easier interaction */
+    width: 100%; /* Full width buttons on smaller screens */
+}
+
+/* Media queries for responsive adjustments */
+@media (max-width: 992px) {
+    /* On medium screens, make inputs and buttons full width */
+    .form-control, button.btn {
+        width: 100%; /* Full width for easier access and cleaner layout */
+    }
+}
+
+@media (max-width: 768px) {
+    .col-md-4 {
+        flex: 0 0 100%; /* Make all column items full width on small screens */
+        max-width: 100%;
+    }
+
+    /* Adjust positioning of input groups to be more compact */
+    .input-group-text, .form-control {
+        display: block;
+        width: 100%;
+    }
+}
+
+/* Additional media query for very small screens */
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.5rem; /* Smaller heading sizes for compact display */
+    }
+}
+
+/* Ensure the canvas for the chart adjusts responsively */
+#expenseChart {
+    width: 33vw;  /* Width relative to the width of the viewport */
+    height: 33vw; /* Height to match width to maintain aspect ratio, adjust based on your layout needs */
+    display: block;
+    margin: 0 auto;
+}
+
+/* Fine-tuning alignment and display settings */
+.expense, .chart_input {
+    margin-top: 20px; /* Additional top margin for separation */
+}

@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <h2 class="mb-3">Dashboard</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Current Balance</h5>
+                    <p class="card-text" id="currentBalance">$0</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Deposit</h5>
+                    <input type="number" class="form-control" id="depositAmount" placeholder="Amount">
+                    <button class="btn btn-primary mt-2" onclick="deposit()">Deposit</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Withdraw</h5>
+                    <input type="number" class="form-control" id="withdrawAmount" placeholder="Amount">
+                    <button class="btn btn-primary mt-2" onclick="withdraw()">Withdraw</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="chart_input">
+        <h2>Update Chart Data</h2>
+        <form id="chartDataForm">
+            <div class="mb-3">
+                <label for="rentInput" class="form-label">Rent</label>
+                <div class="input-group">
+                    <span class="input-group-text">$</span>
+                    <input type="number" class="form-control" id="rentInput" placeholder="Enter amount for Rent">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="groceriesInput" class="form-label">Groceries</label>
+                <div class="input-group">
+                    <span class="input-group-text">$</span>
+                    <input type="number" class="form-control" id="groceriesInput" placeholder="Enter amount for Groceries">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="savingsInput" class="form-label">Savings</label>
+                <div class="input-group">
+                    <span class="input-group-text">$</span>
+                    <input type="number" class="form-control" id="savingsInput" placeholder="Enter amount for Savings">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="utilitiesInput" class="form-label">Utilities</label>
+                <div class="input-group">
+                    <span class="input-group-text">$</span>
+                    <input type="number" class="form-control" id="utilitiesInput" placeholder="Enter amount for Utilities">
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="updateChartData()">Update Chart</button>
+        </form>
+        
+    </div>
+    <div class="expense">
+        <h2 id="expenseTitle">Expense Chart</h2>
+        <canvas id="expenseChart"></canvas>
+    </div>
+
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+{% endblock %}

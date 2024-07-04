@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Overlay for popup effect -->
+<div id="flash-overlay" onclick="closeFlashMessage()"></div>
+
+<!-- Popup for flash message -->
+<div id="flash-message"></div>
+
+<h1>Login</h1>
+<form method="post">
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>
+
+<div id="flash-messages-data" style="display: none;">
+  {{ get_flashed_messages(with_categories=true) | tojson }}
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+{% endblock %}
