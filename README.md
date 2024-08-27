@@ -1,6 +1,6 @@
 # Finance Tracker
 
-Finance Tracker is a web application designed to help users manage their finances efficiently. The app provides tools to track income, monitor spending, and use financial insights to optimize savings. Built with modern web technologies, it offers a user-friendly interface for personal financial management.
+Finance Tracker is a web application designed to help users manage their finances efficiently. The app provides tools to track income, monitor spending, and use financial insights to optimize savings. Built with modern web technologies, it offers a user-friendly interface for personal financial management. 
 
 ## Features
 
